@@ -31,8 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'afya'
-    'cloudinary',
+    'afya',
+    'storages',
     'bootstrap5',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -132,3 +132,10 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AWS_QUERYSTRING_AUTH = False
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = 'AKIARVZNTIDFXOO322AU'
+AWS_SECRET_ACCESS_KEY = '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'
+
+AWS_STORAGE_BUCKET_NAME = 'awwward-bucket'
